@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "data server for dynamic portfolio",
   "main": "server.js",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "author": "Md Ashraful Islam @github/Ashraf0011 @linkedin/in/mraislam/",
   "license": "ISC",
