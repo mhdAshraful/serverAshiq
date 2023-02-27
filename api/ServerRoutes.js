@@ -13,10 +13,11 @@ ServerRoutes.route("/api/allData").get((req, res) => {
             // console.log(err);
             res.send(err.message);
         } else {
-            // console.log("logging at server", data);
+            const documetSize = Buffer.byteLength(JSON.stringify(data), "utf-8");
+            res.setHeader("Content-length", documetSize);
             res.status(200).json(data);
         }
-    })
+    }).lean();
 
 })
 
